@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -49,6 +52,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -63,6 +67,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(150, 23);
             this.textBox2.TabIndex = 6;
+            this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
             // 
             // textBox3
             // 
@@ -70,6 +75,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(150, 23);
             this.textBox3.TabIndex = 7;
+            this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
             // 
             // textBox4
             // 
@@ -77,6 +83,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(63, 23);
             this.textBox4.TabIndex = 8;
+            this.textBox4.Validating += new System.ComponentModel.CancelEventHandler(this.textBox4_Validating);
             // 
             // textBox5
             // 
@@ -84,6 +91,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(63, 23);
             this.textBox5.TabIndex = 9;
+            this.textBox5.Validating += new System.ComponentModel.CancelEventHandler(this.textBox5_Validating);
             // 
             // label1
             // 
@@ -130,6 +138,10 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "ID Медикамента";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -148,6 +160,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form7";
             this.Text = "Form7";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +179,6 @@
         private Label label3;
         private Label label4;
         private Label label5;
+        private ErrorProvider errorProvider1;
     }
 }

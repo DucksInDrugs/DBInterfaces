@@ -45,20 +45,28 @@
             this.showLabel = new System.Windows.Forms.Label();
             this.buttonOpen = new System.Windows.Forms.Button();
             this.userChange = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // insertPharmacist
             // 
-            this.insertPharmacist.Location = new System.Drawing.Point(26, 286);
+            this.insertPharmacist.Location = new System.Drawing.Point(26, 440);
             this.insertPharmacist.Name = "insertPharmacist";
             this.insertPharmacist.Size = new System.Drawing.Size(98, 23);
             this.insertPharmacist.TabIndex = 0;
             this.insertPharmacist.Text = "Фармацевт";
             this.insertPharmacist.UseVisualStyleBackColor = true;
+            this.insertPharmacist.Click += new System.EventHandler(this.insertPharmacist_Click);
             // 
             // insertPurchases
             // 
-            this.insertPurchases.Location = new System.Drawing.Point(244, 257);
+            this.insertPurchases.Location = new System.Drawing.Point(244, 411);
             this.insertPurchases.Name = "insertPurchases";
             this.insertPurchases.Size = new System.Drawing.Size(70, 23);
             this.insertPurchases.TabIndex = 1;
@@ -68,34 +76,37 @@
             // 
             // insertAssortiment
             // 
-            this.insertAssortiment.Location = new System.Drawing.Point(348, 286);
+            this.insertAssortiment.Location = new System.Drawing.Point(348, 440);
             this.insertAssortiment.Name = "insertAssortiment";
             this.insertAssortiment.Size = new System.Drawing.Size(75, 23);
             this.insertAssortiment.TabIndex = 2;
             this.insertAssortiment.Text = "Наличие";
             this.insertAssortiment.UseVisualStyleBackColor = true;
+            this.insertAssortiment.Click += new System.EventHandler(this.insertAssortiment_Click);
             // 
             // insertPharmacy
             // 
-            this.insertPharmacy.Location = new System.Drawing.Point(429, 286);
+            this.insertPharmacy.Location = new System.Drawing.Point(429, 440);
             this.insertPharmacy.Name = "insertPharmacy";
             this.insertPharmacy.Size = new System.Drawing.Size(75, 23);
             this.insertPharmacy.TabIndex = 3;
             this.insertPharmacy.Text = "Аптеки";
             this.insertPharmacy.UseVisualStyleBackColor = true;
+            this.insertPharmacy.Click += new System.EventHandler(this.insertPharmacy_Click);
             // 
             // insertPurchase
             // 
-            this.insertPurchase.Location = new System.Drawing.Point(320, 257);
+            this.insertPurchase.Location = new System.Drawing.Point(320, 411);
             this.insertPurchase.Name = "insertPurchase";
             this.insertPurchase.Size = new System.Drawing.Size(184, 23);
             this.insertPurchase.TabIndex = 4;
             this.insertPurchase.Text = "Приобретение одного товара";
             this.insertPurchase.UseVisualStyleBackColor = true;
+            this.insertPurchase.Click += new System.EventHandler(this.insertPurchase_Click);
             // 
             // insertCategory
             // 
-            this.insertCategory.Location = new System.Drawing.Point(343, 228);
+            this.insertCategory.Location = new System.Drawing.Point(343, 382);
             this.insertCategory.Name = "insertCategory";
             this.insertCategory.Size = new System.Drawing.Size(161, 23);
             this.insertCategory.TabIndex = 5;
@@ -105,25 +116,27 @@
             // 
             // insertDevice
             // 
-            this.insertDevice.Location = new System.Drawing.Point(195, 286);
+            this.insertDevice.Location = new System.Drawing.Point(195, 440);
             this.insertDevice.Name = "insertDevice";
             this.insertDevice.Size = new System.Drawing.Size(147, 23);
             this.insertDevice.TabIndex = 6;
             this.insertDevice.Text = "Медицинские приборы";
             this.insertDevice.UseVisualStyleBackColor = true;
+            this.insertDevice.Click += new System.EventHandler(this.insertDevice_Click);
             // 
             // insertGood
             // 
-            this.insertGood.Location = new System.Drawing.Point(130, 286);
+            this.insertGood.Location = new System.Drawing.Point(130, 440);
             this.insertGood.Name = "insertGood";
             this.insertGood.Size = new System.Drawing.Size(59, 23);
             this.insertGood.TabIndex = 7;
             this.insertGood.Text = "Товары";
             this.insertGood.UseVisualStyleBackColor = true;
+            this.insertGood.Click += new System.EventHandler(this.insertGood_Click);
             // 
             // insertActiveSubstInDrug
             // 
-            this.insertActiveSubstInDrug.Location = new System.Drawing.Point(128, 228);
+            this.insertActiveSubstInDrug.Location = new System.Drawing.Point(128, 382);
             this.insertActiveSubstInDrug.Name = "insertActiveSubstInDrug";
             this.insertActiveSubstInDrug.Size = new System.Drawing.Size(214, 23);
             this.insertActiveSubstInDrug.TabIndex = 8;
@@ -133,7 +146,7 @@
             // 
             // insertDrug
             // 
-            this.insertDrug.Location = new System.Drawing.Point(26, 228);
+            this.insertDrug.Location = new System.Drawing.Point(26, 382);
             this.insertDrug.Name = "insertDrug";
             this.insertDrug.Size = new System.Drawing.Size(96, 23);
             this.insertDrug.TabIndex = 9;
@@ -164,7 +177,7 @@
             // 
             // insertActiveSubst
             // 
-            this.insertActiveSubst.Location = new System.Drawing.Point(107, 257);
+            this.insertActiveSubst.Location = new System.Drawing.Point(107, 411);
             this.insertActiveSubst.Name = "insertActiveSubst";
             this.insertActiveSubst.Size = new System.Drawing.Size(131, 23);
             this.insertActiveSubst.TabIndex = 11;
@@ -174,7 +187,7 @@
             // 
             // insertView
             // 
-            this.insertView.Location = new System.Drawing.Point(26, 257);
+            this.insertView.Location = new System.Drawing.Point(26, 411);
             this.insertView.Name = "insertView";
             this.insertView.Size = new System.Drawing.Size(75, 23);
             this.insertView.TabIndex = 12;
@@ -185,7 +198,7 @@
             // insertLabel
             // 
             this.insertLabel.AutoSize = true;
-            this.insertLabel.Location = new System.Drawing.Point(136, 194);
+            this.insertLabel.Location = new System.Drawing.Point(136, 348);
             this.insertLabel.Name = "insertLabel";
             this.insertLabel.Size = new System.Drawing.Size(259, 15);
             this.insertLabel.TabIndex = 13;
@@ -220,11 +233,84 @@
             this.userChange.UseVisualStyleBackColor = true;
             this.userChange.Click += new System.EventHandler(this.userChange_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(26, 130);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Работники в аптеке";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(163, 130);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(185, 23);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Просмотр цены мед прибора";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(354, 130);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(150, 23);
+            this.button5.TabIndex = 21;
+            this.button5.Text = "Ассортимент в аптеках";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(194, 296);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 23);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Продажи фармацевта";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(247, 267);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(59, 23);
+            this.textBox1.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(223, 270);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 15);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "ID";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(228, 203);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "Отчет";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 332);
+            this.ClientSize = new System.Drawing.Size(531, 488);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.userChange);
             this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.showLabel);
@@ -270,5 +356,12 @@
         private Label showLabel;
         private Button buttonOpen;
         private Button userChange;
+        private Button button1;
+        private Button button3;
+        private Button button5;
+        private Button button2;
+        private TextBox textBox1;
+        private Label label1;
+        private Button button4;
     }
 }

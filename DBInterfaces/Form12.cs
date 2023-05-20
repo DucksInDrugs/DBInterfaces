@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace DBInterfaces
 {
-    public partial class Form8 : Form
+    public partial class Form12 : Form
     {
-        public Form8()
+        public Form12()
         {
             InitializeComponent();
         }
@@ -49,18 +49,18 @@ namespace DBInterfaces
             }
         }
 
-        private void textBox5_Validating(object sender, CancelEventArgs e)
+        private void textBox4_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox5.Text))
+            if (string.IsNullOrEmpty(textBox4.Text))
             {
                 e.Cancel = true;
-                textBox5.Focus();
-                errorProvider1.SetError(textBox5, "Заполните это поле");
+                textBox4.Focus();
+                errorProvider1.SetError(textBox4, "Заполните это поле");
             }
             else
             {
                 e.Cancel = false;
-                errorProvider1.SetError(textBox5, null);
+                errorProvider1.SetError(textBox4, null);
             }
         }
 
@@ -70,7 +70,7 @@ namespace DBInterfaces
             {
                 using (DbaptekiContext db = new DbaptekiContext())
                 {
-                    int count = db.Database.ExecuteSqlRaw("INSERT INTO Purchases VALUES ({0}, {1}, {2}, {3})", Double.Parse(textBox2.Text), textBox3.Text, textBox4.Text, int.Parse(textBox5.Text));
+                    int count = db.Database.ExecuteSqlRaw("INSERT INTO MedicalDevices VALUES ({0}, {1}, {2}, {3})", textBox2.Text, textBox3.Text, textBox4.Text, int.Parse(textBox5.Text));
                 }
                 Close();
             }

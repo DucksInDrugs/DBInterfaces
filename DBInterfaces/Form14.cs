@@ -9,12 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DBInterfaces
 {
-    public partial class Form8 : Form
+    public partial class Form14 : Form
     {
-        public Form8()
+        public Form14()
         {
             InitializeComponent();
         }
@@ -49,28 +50,13 @@ namespace DBInterfaces
             }
         }
 
-        private void textBox5_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(textBox5.Text))
-            {
-                e.Cancel = true;
-                textBox5.Focus();
-                errorProvider1.SetError(textBox5, "Заполните это поле");
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider1.SetError(textBox5, null);
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 using (DbaptekiContext db = new DbaptekiContext())
                 {
-                    int count = db.Database.ExecuteSqlRaw("INSERT INTO Purchases VALUES ({0}, {1}, {2}, {3})", Double.Parse(textBox2.Text), textBox3.Text, textBox4.Text, int.Parse(textBox5.Text));
+                    int count = db.Database.ExecuteSqlRaw("INSERT INTO Pharmacies VALUES ({0}, {1})", textBox2.Text, textBox3.Text);
                 }
                 Close();
             }

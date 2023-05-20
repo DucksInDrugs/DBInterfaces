@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 
 namespace DAL;
 
+[PrimaryKey(nameof(DrugId))]
 public partial class Drug
 {
     public int DrugId { get; set; }
